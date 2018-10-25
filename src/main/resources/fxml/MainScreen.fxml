@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="930.0" prefWidth="930.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mariuszbilda.MainScreenController">
+   <children>
+       <ButtonBar buttonMinWidth="30.0" layoutX="389.0" layoutY="378.0" prefHeight="58.0" prefWidth="530.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="11.0">
+         <buttons>
+             <JFXButton id="label-info" buttonType="RAISED" onAction="#chooseDirectory" text="Cambia cartella&#10;da osservare" textAlignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                         <Image url="@../icons/icons8_Search_96px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                         <Stop color="#aa00ff" />
+                         <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill></JFXButton>
+             <JFXButton id="label-info" buttonType="RAISED" onAction="#chooseDestinationDir" text="Cambia cartella &#10;di destinazione">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                         <Image url="@../icons/icons8_Save_Archive_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                         <Stop color="#aa00ff" />
+                         <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+             <JFXButton id="label-info" buttonType="RAISED" onAction="#createPDFFile" text="Crea PDF">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8_PDF_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                         <Stop color="#aa00ff" />
+                         <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill></JFXButton>
+         </buttons>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </ButtonBar>
+       <ScrollPane fitToWidth="true" layoutY="103.0" minHeight="350.0" minWidth="930.0" pannable="true" vvalue="1.0" AnchorPane.bottomAnchor="164.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="81.0">
+         <content>
+             <HBox fx:id="imageBox" fillHeight="false" minHeight="300.0" />
+         </content>
+      </ScrollPane>
+       <HBox alignment="CENTER" layoutX="11.0" layoutY="36.0" prefHeight="50.0" prefWidth="909.0" spacing="15.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Label id="label-info" text="Cartella attualmente&#10;osservata">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8_Binoculars_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label id="path-labels" fx:id="labelWatchedDirectory">
+               <tooltip>
+                  <Tooltip text="Questa è la directory che verrà osservata dal programma, quando un immagine verrà inserita essa sarà aggiunta alla lista delle immagini sotto." />
+               </tooltip></Label>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/icons8_Downloads_Folder_96px.png" />
+               </image>
+            </ImageView>
+            <Label id="label-info" text="Cartella&#10;desinazione" textAlignment="CENTER" />
+            <Label id="path-labels" fx:id="labelSaveDir">
+               <tooltip>
+                  <Tooltip text="Questa è la cartella di destinazione del file PDF." />
+               </tooltip></Label>
+         </children>
+      </HBox>
+       <JFXCheckBox id="label-info" fx:id="checkboxDelete" checkedColor="#aa00ff" layoutX="727.0" layoutY="312.0" text="Cancella i file dopo aver creato il PDF" AnchorPane.bottomAnchor="120.0" AnchorPane.rightAnchor="14.0" />
+      <MenuBar layoutX="389.0" layoutY="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="Menu">
+                <items>
+                    <MenuItem fx:id="menuItemReset" mnemonicParsing="false" text="Reset">
+                        <graphic>
+                            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../icons/icons8_Reset_96px_3.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </MenuItem>
+                </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Informazioni">
+               <items>
+                   <MenuItem mnemonicParsing="false" onAction="#showLogWindow" text="Mostra log...">
+                       <graphic>
+                           <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                               <image>
+                                   <Image url="@../icons/icons8_Book_48px.png" />
+                               </image>
+                           </ImageView>
+                       </graphic>
+                   </MenuItem>
+                   <MenuItem mnemonicParsing="false" onAction="#showDeveloperInfo" text="Sviluppatore...">
+                       <graphic>
+                           <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                               <image>
+                                   <Image url="@../icons/icons8_Workspace_48px.png" />
+                               </image>
+                           </ImageView>
+                       </graphic>
+                   </MenuItem>
+               </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+       <JFXProgressBar id="progress" fx:id="progressBar" layoutY="99.0" progress="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="80.0" />
+       <VBox alignment="CENTER" layoutX="15.0" layoutY="475.0" prefHeight="50.0" prefWidth="222.0" spacing="10.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
+           <children>
+               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                   <children>
+                       <Label id="label-info" text="Fattore di compressione">
+                           <tooltip>
+                               <Tooltip text="Minore è il fattore di compressione &#10;piu le immagini saranno compressa e piccola di dimensioni&#10;Va utilizzato un valore intermedio!&#10;100   = Immagine originale&#10;0 = Immagine compressa al massimo (Non usare)" />
+                           </tooltip>
+                       </Label>
+                       <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                               <Image url="@../icons/icons8_Help_96px.png" />
+                           </image>
+                       </ImageView>
+                   </children>
+               </HBox>
+               <JFXSlider fx:id="compressionFactorSlider" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="60.0" />
+             <Label id="label-info" alignment="CENTER" prefHeight="50.0" prefWidth="222.0" text="Pagine caricate">
+               <graphic>
+                   <StackPane>
+                       <children>
+                           <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                               <image>
+                                   <Image url="@../icons/icons8_Two_Pages_96px.png" />
+                               </image>
+                           </ImageView>
+                           <Label id="label-number" fx:id="labelNumberOfPages" text="0" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                       </children>
+                   </StackPane>
+               </graphic>
+            </Label>
+           </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+       </VBox>
+   </children>
+</AnchorPane>

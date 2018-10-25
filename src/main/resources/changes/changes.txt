@@ -1,0 +1,6 @@
+Novita' nella v. 6.7 di APDFC:
+
+- Impostato valore di default della compressione a 60.0
+- E' stato eseguito l'aggiornamento dei moduli a Java 10 e versioni piu recente delle librerie.
+- Adesso il programma rileva l'orientamento dell'immagine, ruotandola nel caso non fosse messa in verticale.
+- E' possibile vedere l'anteprima dell'immagine aggiunta con il programma di default cliccandoci sopra.

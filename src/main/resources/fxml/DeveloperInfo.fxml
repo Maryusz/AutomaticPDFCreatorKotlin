@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="293.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8.0.141" fx:controller="com.mariuszbilda.DeveloperInfo">
+   <children>
+      <Label layoutX="63.0" layoutY="164.0" prefHeight="92.0" prefWidth="479.0" text="PDF Automatic Creator 0.6.5"
+             AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="58.0"
+             AnchorPane.topAnchor="164.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="programIcon" fitHeight="150.0" fitWidth="200.0" layoutX="225.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="14.0">
+         <image>
+            <Image url="@../icons/icons8_Parchment_96px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="208.0" layoutY="217.0" lineSpacing="2.0" text="by Mariusz Arnold Bilda" textAlignment="CENTER" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="208.0" AnchorPane.rightAnchor="204.0" AnchorPane.topAnchor="217.0">
+         <font>
+            <Font name="Lato Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="233.0" layoutY="271.0" text="mariusz.mab@gmail.com" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="Constantia Italic" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

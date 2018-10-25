@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<fx:root prefHeight="300.0" prefWidth="200.0" styleClass="image-item" stylesheets="@../css/style.css" type="AnchorPane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <StackPane layoutX="-21.0" layoutY="43.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+            <children>
+                <ImageView id="internal-image" fx:id="iv_image" fitHeight="250.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </StackPane>
+        <Label id="image-text" fx:id="lb_num_page" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="292.0" text="{num pag}" textAlignment="CENTER" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="292.0" />
+    </children>
+</fx:root>
